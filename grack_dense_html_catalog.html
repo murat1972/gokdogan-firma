@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-RACK DENSE™ Katalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body { 
+                width: 297mm; 
+                height: 210mm; 
+                margin: 0;
+                font-size: 12px;
+            }
+            .page { 
+                page-break-after: always; 
+                width: 297mm; 
+                height: 210mm;
+                margin: 0;
+                padding: 0;
+            }
+            .page:last-child { 
+                page-break-after: avoid; 
+            }
+            .no-print { display: none; }
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        .page {
+            width: 297mm;
+            height: 210mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3498db 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M10,10 L90,10 L90,90 L10,90 Z M20,20 L80,20 L80,80 L20,80 Z M30,30 L70,30 L70,70 L30,70 Z" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" fill="none"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .logo-section {
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .main-title {
+            font-size: 4.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -2px;
+        }
+
+        .sub-title {
+            font-size: 1.8em;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .cover-features {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .cover-feature {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cover-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .cover-feature h3 {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .cover-feature p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Content Pages */
+        .content-page {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-header {
+            background: linear-gradient(90deg, #2980b9, #3498db);
+            color: white;
+            padding: 15px 30px;
+            margin: -30px -30px 30px -30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-header h1 {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .page-number {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .content-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        .content-section h2 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-icon {
+            width: 25px;
+            height: 25px;
+            background: #3498db;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .product-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-code {
+            background: #ecf0f1;
+            color: #7f8c8d;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            color: #2980b9;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+
+        .stats-section {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2em;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .sector-page {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .sector-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .sector-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .no-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Print Button -->
+    <button onclick="window.print()" class="btn-primary no-print">🖨️ Yazdır</button>
+
+    <!-- Cover Page -->
+    <div class="page cover-page">
+        <div class="logo-section">
+            <div class="main-title">G-RACK DENSE™</div>
+            <div class="sub-title">Yoğun Depolamada Maksimum Verimlilik</div>
+        </div>
+        
+        <div class="cover-features">
+            <div class="cover-feature">
+                <div class="cover-feature-icon">🏗️</div>
+                <h3>%80 Alan Kazancı</h3>
+                <p>Maksimum depolama verimliliği</p>
+            </div>
+            <div class="cover-feature">
+                <div class="cover-feature-icon">⚡</div>
+                <h3>Otomasyon Uyumlu</h3>
+                <p>AGV ve ASRS entegrasyonu</p>
+            </div>
+            <div class="cover-feature">
+                <div class="cover-feature-icon">🛡️</div>
+                <h3>Galvaniz Kaplama</h3>
+                <p>Sıfır paslanma garantisi</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Overview Page -->
+    <div class="page content-page">
+        <div class="page-header">
+            <h1>G-RACK DENSE™ Ürün Ailesi</h1>
+            <div class="page-number">Sayfa 2</div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>7 Farklı Sistem, Sonsuz Çözüm</h3>
+            <p>FIFO, LIFO, Drive-In, Push-Back, Shuttle ve Roller sistemleriyle her depolama ihtiyacına çözüm</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-code">GR-DENSE-B2B</div>
+                <div class="product-title">Sırt Sırta Palet Rafları</div>
+                <div class="product-description">Klasik ve sağlam. Her iki koridordan forklift erişimi. 1000-3000 kg/palet kapasitesi.</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-code">GR-DENSE-DRIVEIN</div>
+                <div class="product-title">Drive-In Raflar</div>
+                <div class="product-description">LIFO prensibi. 2-8 palet derinliği. Soğuk depolar için ideal yüksek yoğunluklu çözüm.</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-code">GR-DENSE-FIFO</div>
+                <div class="product-title">Akışkan Raflar</div>
+                <div class="product-description">Otomatik FIFO akışı. Eğimli roller paneller. Gıda ve içecek sektörü için mükemmel.</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-code">GR-DENSE-LIFO</div>
+                <div class="product-title">Geri İtmeli Raflar</div>
+                <div class="product-description">LIFO mantığı. Frenli raylar. Düşük rotasyonlu stoklar için güvenli kullanım.</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-code">GR-DENSE-PUSHBACK</div>
+                <div class="product-title">Push-Back Raflar</div>
+                <div class="product-description">2-5 palet derinliği. Raylı platformlar. Mevsimsel ürün depolamada yüksek performans.</div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-code">GR-DENSE-ROLLER</div>
+                <div class="product-title">Hareketli Raflar</div>
+                <div class="product-description">%80 alan kazancı. Manuel/motorlu sistem. Arşiv ve tekstil depoları için benzersiz çözüm.</div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2 style="text-align: center; margin-bottom: 25px; color: white;">Teknik Üstünlükler</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>3000kg</h3>
+                    <p>Maksimum palet kapasitesi</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12m</h3>
+                    <p>Maksimum sistem yüksekliği</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100μ</h3>
+                    <p>Galvaniz kaplama kalınlığı</p>
+                </div>
+                <div class="stat-item">
+                    <h3>%80</h3>
+                    <p>Alan kullanım verimliliği</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Features Page -->
+    <div class="page content-page">
+        <div class="page-header">
+            <h1>Teknik Özellikler ve Avantajlar</h1>
+            <div class="page-number">Sayfa 3</div>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-section">
+                <h2><span class="section-icon">🔧</span>Dayanıklılık Özellikleri</h2>
+                <ul class="feature-list">
+                    <li>Sıcak daldırma galvaniz kaplama (70-100 mikron)</li>
+                    <li>Elektrostatik toz boya (60-80 mikron)</li>
+                    <li>-30°C'ye kadar soğuk dayanımı</li>
+                    <li>%95 nem dayanıklılığı</li>
+                    <li>Sismik performans standartları uygunluğu</li>
+                    <li>UV dayanımı ve renk koruma</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2><span class="section-icon">⚙️</span>Otomasyon Entegrasyonu</h2>
+                <ul class="feature-list">
+                    <li>WMS/ERP uyumlu barkod/QR alanları</li>
+                    <li>Pick-to-Light sistemleri desteği</li>
+                    <li>Loadcell tabanlı ağırlık kontrol</li>
+                    <li>AGV uyumlu ray-konumlandırma</li>
+                    <li>ASRS robot entegrasyonu</li>
+                    <li>Real-time stok takip sistemi</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2><span class="section-icon">🏭</span>Operasyonel Üstünlükler</h2>
+                <ul class="feature-list">
+                    <li>Hızlı kurulum ve devreye alma</li>
+                    <li>Minimum bakım gereksinimi</li>
+                    <li>Modüler ve genişletilebilir tasarım</li>
+                    <li>Esnek reconfigurasyon imkanı</li>
+                    <li>Çoklu SKU yönetim kapasitesi</li>
+                    <li>Energy-efficient operasyon</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2><span class="section-icon">🛡️</span>Güvenlik Standartları</h2>
+                <ul class="feature-list">
+                    <li>Yangın yönetmeliği uyumu</li>
+                    <li>Çarpma bariyerleri ve koruma</li>
+                    <li>Sismik güvenlik sertifikasyonu</li>
+                    <li>İş güvenliği standartları</li>
+                    <li>Emergency stop sistemleri</li>
+                    <li>Güvenlik ışıklandırması</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>🌍 Çevre Dostu Yaklaşım</h3>
+            <p>Geri dönüştürülebilir malzemeler • Enerji verimli üretim • Sürdürülebilir tasarım • Uzun ömür = Düşük çevresel etki</p>
+        </div>
+    </div>
+
+    <!-- Sector Applications Page -->
+    <div class="page content-page sector-page">
+        <div class="page-header" style="background: rgba(255,255,255,0.1);">
+            <h1>Sektörel Uygulamalar</h1>
+            <div class="page-number">Sayfa 4</div>
+        </div>
+
+        <div class="sector-grid">
+            <div class="sector-card">
+                <div class="sector-icon">❄️</div>
+                <h3>Soğuk Hava Depoları</h3>
+                <p><strong>Önerilen:</strong> DRIVEIN + SHUTTLE</p>
+                <p>• Enerji verimliliği %60 artış<br>
+                • Korozyon direnci<br>
+                • -30°C'ye kadar dayanım</p>
+            </div>
+
+            <div class="sector-card">
+                <div class="sector-icon">🍎</div>
+                <h3>Gıda & İçecek</h3>
+                <p><strong>Önerilen:</strong> FIFO + B2B</p>
+                <p>• HACCP uyumlu hijyenik tasarım<br>
+                • Otomatik FIFO kontrolü<br>
+                • FDA standartları</p>
+            </div>
+
+            <div class="sector-card">
+                <div class="sector-icon">🚗</div>
+                <h3>Otomotiv</h3>
+                <p><strong>Önerilen:</strong> PUSHBACK + B2B</p>
+                <p>• 3000 kg ağır yük kapasitesi<br>
+                • JIT üretim desteği<br>
+                • Çoklu SKU yönetimi</p>
+            </div>
+
+            <div class="sector-card">
+                <div class="sector-icon">📦</div>
+                <h3>E-ticaret</h3>
+                <p><strong>Önerilen:</strong> B2B + SHUTTLE</p>
+                <p>• Hızlı picking operasyonları<br>
+                • Otomasyon hazırlığı<br>
+                • Sezonsal esneklik</p>
+            </div>
+
+            <div class="sector-card">
+                <div class="sector-icon">💊</div>
+                <h3>İlaç Sektörü</h3>
+                <p><strong>Önerilen:</strong> FIFO + SHUTTLE</p>
+                <p>• GMP standartları uyumu<br>
+                • Tam izlenebilirlik<br>
+                • 21 CFR Part 11 uyumlu</p>
+            </div>
+
+            <div class="sector-card">
+                <div class="sector-icon">👕</div>
+                <h3>Tekstil</h3>
+                <p><strong>Önerilen:</strong> ROLLER + DRIVEIN</p>
+                <p>• %80 alan kazancı<br>
+                • Sezonsal esneklik<br>
+                • Maliyet optimizasyonu</p>
+            </div>
+        </div>
+
+        <div class="stats-section" style="background: rgba(255,255,255,0.1);">
+            <h2 style="text-align: center; margin-bottom: 25px;">ROI ve Yatırım Geri Dönüş Süreleri</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>2-3 Yıl</h3>
+                    <p>Soğuk Hava & E-ticaret</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3-4 Yıl</h3>
+                    <p>Gıda & İlaç Sektörü</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4-5 Yıl</h3>
+                    <p>Otomotiv Endüstrisi</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4-6 Yıl</h3>
+                    <p>Tekstil & Arşiv</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page content-page">
+        <div class="page-header">
+            <h1>İletişim ve Destek</h1>
+            <div class="page-number">Sayfa 5</div>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-section">
+                <h2><span class="section-icon">📞</span>Satış ve Danışmanlık</h2>
+                <ul class="feature-list">
+                    <li>Ücretsiz keşif ve analiz hizmeti</li>
+                    <li>3D tasarım ve simulasyon</li>
+                    <li>Maliyet-fayda analizi</li>
+                    <li>ROI hesaplama desteği</li>
+                    <li>Proje yönetimi hizmeti</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <strong>Satış Departmanı:</strong><br>
+                    📞 +90 XXX XXX XX XX<br>
+                    ✉️ sales@grack.com.tr
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2><span class="section-icon">🔧</span>Kurulum ve Servis</h2>
+                <ul class="feature-list">
+                    <li>Profesyonel kurulum ekibi</li>
+                    <li>Commissioning ve test süreçleri</li>
+                    <li>Operatör eğitim programları</li>
+                    <li>Preventive maintenance planları</li>
+                    <li>7/24 teknik destek hattı</li>
+                </ul>
+                <div style="margin-top: 20px;">
+                    <strong>Teknik Servis:</strong><br>
+                    📞 +90 XXX XXX XX XX<br>
+                    ✉️ service@grack.com.tr
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>🎯 Proje Süreci</h3>
+            <p><strong>1. Analiz</strong> → <strong>2. Tasarım</strong> → <strong>3. Teklif</strong> → <strong>4. Üretim</strong> → <strong>5. Kurulum</strong> → <strong>6. Devreye Alma</strong> → <strong>7. Eğitim</strong> → <strong>8. Destek</strong></p>
+        </div>
+
+        <div class="contact-section">
+            <h2 style="margin-bottom: 20px;">Hemen İletişime Geçin!</h2>
+            <p>G-RACK DENSE™ ile deponuzun geleceğini planlayın. Uzmanlarımız sizin için en uygun çözümü tasarlamaya hazır.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>🌐 Web Sitesi</h4>
+                    <p>www.grack.com.tr</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 E-posta</h4>
+                    <p>info@grack.com.tr</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📱 Sosyal Medya</h4>
+                    <p>@GRackTurkiye</p>
+                </div>
+            </div>
+            
+            <button class="btn-primary" style="margin-top: 20px; background: rgba(255,255,255,0.2);">
+                📞 Ücretsiz Keşif Talep Et
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gökdoğan AgroRack Pro - 2025 Komple Katalog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Navigation */
+        .nav-menu {
+            background: #2c3e50;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: sticky;
+            top: 10px;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu a:hover {
+            background: #27ae60;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 100px 40px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: move 20s linear infinite;
+        }
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        .hero h1 {
+            font-size: 4em;
+            margin: 0 0 20px 0;
+            position: relative;
+            z-index: 1;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+        .hero .subtitle {
+            font-size: 2em;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-feature {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        /* Category Headers */
+        .category-header {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 50px 0 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .category-header h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .category-header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #27ae60;
+        }
+        .product-header {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 25px;
+        }
+        .product-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            background: #27ae60;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .product-body {
+            padding: 25px;
+        }
+        .product-specs {
+            margin: 20px 0;
+        }
+        .spec-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .spec-icon {
+            font-size: 1.3em;
+            margin-right: 15px;
+            color: #3498db;
+            min-width: 25px;
+        }
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .feature-tag {
+            background: #e8f5e9;
+            color: #27ae60;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        /* Integrated Solutions Section */
+        .integrated-section {
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            margin: 50px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .solution-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .solution-card:hover {
+            transform: scale(1.05);
+            border-color: #27ae60;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .solution-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #27ae60;
+        }
+        
+        /* Technical Specs Table */
+        .specs-comparison {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            overflow-x: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+        .specs-table th {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        .specs-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .specs-table tr:hover {
+            background: #f8f9fa;
+        }
+        .highlight {
+            background: #e8f5e9;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .contact-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .contact-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .specs-table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-menu">
+        <a href="#sabit">Sabit Sistemler</a>
+        <a href="#mobil">Mobil Sistemler</a>
+        <a href="#kurumsal">Kurumsal Sistemler</a>
+        <a href="#entegre">Entegre Çözümler</a>
+        <a href="#teknik">Teknik Özellikler</a>
+        <a href="#iletisim">İletişim</a>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>GÖKDOĞAN AGRORACK PRO</h1>
+            <p class="subtitle">🌱 ŞEHRİN GÖBEĞİNDE TARLA SAHİBİ OLUN! 🌱</p>
+            <p style="font-size: 1.4em; margin: 30px 0;">
+                Galvaniz Raf Sistemleri + Sulama + Aydınlatma + İklimlendirme<br>
+                <strong>TEK ELDEN KOMPLE ÇÖZÜM</strong>
+            </p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <strong>%95</strong><br>Su Tasarrufu
+                </div>
+                <div class="hero-feature">
+                    <strong>10x</strong><br>Alan Verimliliği
+                </div>
+                <div class="hero-feature">
+                    <strong>365 Gün</strong><br>Üretim
+                </div>
+                <div class="hero-feature">
+                    <strong>9-12 Ay</strong><br>Geri Dönüş
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 1: Sabit Sistemler -->
+        <div id="sabit" class="category-header">
+            <h2>1. SABİT SİSTEMLER</h2>
+            <p>İç Mekan ve Kapalı Alan Kullanımı İçin</p>
+        </div>
+        
+        <div class="product-grid">
+            <!-- AGRORACK01 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK01</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Mikro Yeşillik Üretim Sistemi</div>
+                    <div class="product-price">$12.000 - $15.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📏</span>
+                            <span>Boyut: 6 x 1.5 x 2.5 m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌱</span>
+                            <span>Kapasite: 2.000 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">⚡</span>
+                            <span>75 adet LED, 5 katlı sistem</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">💧</span>
+                            <span>Günlük 25L su tüketimi</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏢</span>
+                            <span>İdeal: Restoran, otel, kafe</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Galvaniz Raf</span>
+                        <span class="feature-tag">Hidroponik</span>
+                        <span class="feature-tag">Otomasyon</span>
+                        <span class="feature-tag">Mobil Kontrol</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRORACK02 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK02</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Şifalı Bitki Üretim Sistemi</div>
+                    <div class="product-price">$14.000 - $18.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📏</span>
+                            <span>Boyut: 4 x 1.2 x 2.5 m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌿</span>
+                            <span>Kapasite: 1.800 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">💡</span>
+                            <span>60 adet LED, 4 katlı sistem</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌡️</span>
+                            <span>İklim kontrolü opsiyonel</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">💊</span>
+                            <span>İdeal: Aktar, eczane, çay üretimi</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Özel Spektrum</span>
+                        <span class="feature-tag">Nem Kontrolü</span>
+                        <span class="feature-tag">Aromatik Bitkiler</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRORACK03 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK03</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Market Tedarik Modeli</div>
+                    <div class="product-price">$20.000 - $30.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📏</span>
+                            <span>Boyut: 6 x 2 x 3 m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🥬</span>
+                            <span>Kapasite: 500 kg/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🍓</span>
+                            <span>Meyve-sebze uyumlu</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">📦</span>
+                            <span>Yüksek sarkma mesafeli</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🛒</span>
+                            <span>İdeal: Zincir marketler</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Ağır Yük Kapasitesi</span>
+                        <span class="feature-tag">Çilek/Domates</span>
+                        <span class="feature-tag">Otomatik Hasat</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRORACK04 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK04</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Ev Tipi Sistem</div>
+                    <div class="product-price">$7.000 - $9.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📏</span>
+                            <span>Boyut: 3 x 1.5 x 2.0 m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏠</span>
+                            <span>Kapasite: 1.200 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🔇</span>
+                            <span>Sessiz çalışma</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🎨</span>
+                            <span>Dekoratif tasarım</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">👨‍👩‍👧‍👦</span>
+                            <span>İdeal: Ev, balkon, hobi</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Kompakt Tasarım</span>
+                        <span class="feature-tag">Kolay Kullanım</span>
+                        <span class="feature-tag">Düşük Enerji</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRORACK05 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK05</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Eğitim ve Stand Tipi</div>
+                    <div class="product-price">$3.000 - $4.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📏</span>
+                            <span>Boyut: 1.2 x 0.6 x 2.0 m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🎓</span>
+                            <span>Kapasite: 300-500 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">👁️</span>
+                            <span>Şeffaf panel seçeneği</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🚀</span>
+                            <span>Kolay taşıma</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏫</span>
+                            <span>İdeal: Okul, fuar, demo</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Eğitim Amaçlı</span>
+                        <span class="feature-tag">Portatif</span>
+                        <span class="feature-tag">Demo Uygun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRORACK06 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK06</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Şirket İçi Mini Sistem</div>
+                    <div class="product-price">$5.000 - $6.500</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📏</span>
+                            <span>Boyut: 2 x 1 x 2.2 m</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏢</span>
+                            <span>Kapasite: 800 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🎨</span>
+                            <span>Özel renk seçenekleri</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌿</span>
+                            <span>Hava temizleme</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">💼</span>
+                            <span>İdeal: Ofis, lobi, yemekhane</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Kurumsal İmaj</span>
+                        <span class="feature-tag">Motivasyon</span>
+                        <span class="feature-tag">Temiz Hava</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: Mobil Sistemler -->
+        <div id="mobil" class="category-header" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+            <h2>2. MOBİL SİSTEMLER</h2>
+            <p>Konteyner Bazlı Taşınabilir Üretim</p>
+        </div>
+        
+        <div class="product-grid">
+            <!-- CONTAINER20 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK CONTAINER20</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">20ft Standart Konteyner</div>
+                    <div class="product-price">$35.000 - $60.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📦</span>
+                            <span>Tip: 20 ft konteyner</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌱</span>
+                            <span>Kapasite: ~4.000 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">⚡</span>
+                            <span>15 kW güç ihtiyacı</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🚚</span>
+                            <span>Kolay taşıma ve kurulum</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏛️</span>
+                            <span>İdeal: Belediye, afet bölgesi</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Tak-Çalıştır</span>
+                        <span class="feature-tag">İzin Gerektirmez</span>
+                        <span class="feature-tag">1 Gün Kurulum</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER40 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK CONTAINER40</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">40ft Büyük Konteyner</div>
+                    <div class="product-price">$60.000 - $90.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">📦</span>
+                            <span>Tip: 40 ft konteyner</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌿</span>
+                            <span>Kapasite: 7.000-8.000 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">⚡</span>
+                            <span>30 kW güç ihtiyacı</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🔌</span>
+                            <span>Tam otonom sistem</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏪</span>
+                            <span>İdeal: Gıda bankası, kırsal</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Çift Bölmeli</span>
+                        <span class="feature-tag">Yüksek Kapasite</span>
+                        <span class="feature-tag">İhracat Uygun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER COLD -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK CONTAINER COLD</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">40ft Soğutmalı Konteyner</div>
+                    <div class="product-price">$70.000 - $100.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">❄️</span>
+                            <span>Tip: 40 ft reefer</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🍄</span>
+                            <span>Mantar, tohum üretimi</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌡️</span>
+                            <span>-5°C ile +15°C kontrol</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">💨</span>
+                            <span>HEPA filtreli hava</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🔬</span>
+                            <span>İdeal: Özel ürünler</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Soğuk Zincir</span>
+                        <span class="feature-tag">Steril Ortam</span>
+                        <span class="feature-tag">Hassas Kontrol</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE LAB -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK MOBILE LAB</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Mobil Ar-Ge Laboratuvarı</div>
+                    <div class="product-price">$45.000 - $65.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">🔬</span>
+                            <span>Araştırma konteyneri</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">📊</span>
+                            <span>Veri toplama sistemleri</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🧪</span>
+                            <span>Lab ekipmanları dahil</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">📡</span>
+                            <span>Uzaktan izleme</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🎓</span>
+                            <span>İdeal: Üniversite, TÜBİTAK</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Ar-Ge Uyumlu</span>
+                        <span class="feature-tag">Veri Analizi</span>
+                        <span class="feature-tag">Akademik</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 3: Kurumsal Sistemler -->
+        <div id="kurumsal" class="category-header" style="background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);">
+            <h2>3. KURUMSAL VE ENDÜSTRİYEL SİSTEMLER</h2>
+            <p>Büyük Ölçekli Profesyonel Üretim</p>
+        </div>
+        
+        <div class="product-grid">
+            <!-- AGRORACK07 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK07</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Endüstriyel Büyük Sistem</div>
+                    <div class="product-price">$150.000 - $500.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">🏭</span>
+                            <span>Projeye özel tasarım</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">📈</span>
+                            <span>Kapasite: 3-5 ton/gün</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏗️</span>
+                            <span>1000m²'de 10.000m² üretim</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🤖</span>
+                            <span>Tam otomasyon, robotik hasat</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏢</span>
+                            <span>İdeal: Gıda fabrikaları, OSB</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Endüstri 4.0</span>
+                        <span class="feature-tag">Yapay Zeka</span>
+                        <span class="feature-tag">ERP Entegre</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CITYFARM -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK CITYFARM</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Çok Katlı Tarım Binası</div>
+                    <div class="product-price">$500.000 - $2.000.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">🏢</span>
+                            <span>Dikey tarım kulesi</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌆</span>
+                            <span>Kapasite: 20+ ton/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🌐</span>
+                            <span>Akıllı şehir entegrasyonu</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🔋</span>
+                            <span>Yenilenebilir enerji</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏛️</span>
+                            <span>İdeal: Büyükşehir projeleri</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Şehir Tarımı</span>
+                        <span class="feature-tag">Karbon Negatif</span>
+                        <span class="feature-tag">Showcase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODULAR PARK -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK MODULAR PARK</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Açık Alan Tarım Parkı</div>
+                    <div class="product-price">$100.000+</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">🌳</span>
+                            <span>Modüler açık sistem</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏞️</span>
+                            <span>Sınırsız genişleme</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">👥</span>
+                            <span>Toplumsal tarım alanları</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">♻️</span>
+                            <span>Sürdürülebilir tasarım</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏛️</span>
+                            <span>İdeal: Belediye parkları</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">Sosyal Proje</span>
+                        <span class="feature-tag">Eğitim Alanı</span>
+                        <span class="feature-tag">Turizm</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCHOOL -->
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-name">AGRORACK SCHOOL</div>
+                    <div style="font-size: 1.1em; margin: 10px 0;">Eğitim Amaçlı Mini Sistem</div>
+                    <div class="product-price">$2.500 - $5.000</div>
+                </div>
+                <div class="product-body">
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-icon">🎓</span>
+                            <span>Kompakt eğitim kiti</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">👨‍🏫</span>
+                            <span>Kapasite: 300 bitki/ay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">📚</span>
+                            <span>Müfredat desteği</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🔬</span>
+                            <span>Deney ve gözlem alanı</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon">🏫</span>
+                            <span>İdeal: Okul laboratuvarları</span>
+                        </div>
+                    </div>
+                    <div class="product-features">
+                        <span class="feature-tag">STEM Eğitimi</span>
+                        <span class="feature-tag">Öğretmen Kiti</span>
+                        <span class="feature-tag">Güvenli</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Integrated Solutions -->
+        <div id="entegre" class="integrated-section">
+            <h2 style="text-align: center; color: #2c3e50; font-size: 2.8em; margin-bottom: 20px;">
+                🤝 TEK ELDEN ENTEGRE ÇÖZÜMLER
+            </h2>
+            <p style="text-align: center; font-size: 1.3em; color: #7f8c8d; margin-bottom: 40px;">
+                Tüm sistemlerinizi güvenilir çözüm ortaklarımızla tek elden sağlıyoruz
+            </p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">💧</div>
+                    <h3>Sulama Sistemleri</h3>
+                    <p><strong>Ortaklarımız:</strong></p>
+                    <p>Netafim, Rain Bird, Irritec</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Otomatik dozajlama</li>
+                        <li>EC/pH kontrolü</li>
+                        <li>Kapalı döngü sistem</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">💡</div>
+                    <h3>LED Aydınlatma</h3>
+                    <p><strong>Ortaklarımız:</strong></p>
+                    <p>Philips, Osram, Valoya</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Full spektrum</li>
+                        <li>3.2 μmol/J verimlilik</li>
+                        <li>50.000 saat ömür</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🌡️</div>
+                    <h3>İklimlendirme</h3>
+                    <p><strong>Ortaklarımız:</strong></p>
+                    <p>Daikin, Munters, ULPATEK</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>VRV klima sistemleri</li>
+                        <li>Hassas nem kontrolü</li>
+                        <li>CO2 zenginleştirme</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🤖</div>
+                    <h3>Otomasyon</h3>
+                    <p><strong>Ortaklarımız:</strong></p>
+                    <p>Siemens, Schneider, Priva</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>PLC kontrol</li>
+                        <li>SCADA sistemi</li>
+                        <li>Mobil uygulama</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🌱</div>
+                    <h3>Tohum & Gübre</h3>
+                    <p><strong>Ortaklarımız:</strong></p>
+                    <p>Rijk Zwaan, Yara, Grodan</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Premium tohumlar</li>
+                        <li>Hidroponik gübreler</li>
+                        <li>Yetiştirme ortamları</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3>Enerji Sistemleri</h3>
+                    <p><strong>Ortaklarımız:</strong></p>
+                    <p>CW Enerji, ABB, Mutlu Akü</p>
+                    <ul style="text-align: left; margin-top: 15px;">
+                        <li>Güneş panelleri</li>
+                        <li>Enerji depolama</li>
+                        <li>Kesintisiz güç</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Specifications -->
+        <div id="teknik" class="specs-comparison">
+            <h2 style="text-align: center; color: #2c3e50; font-size: 2.5em; margin-bottom: 30px;">
+                📊 TEKNİK ÖZELLİKLER KARŞILAŞTIRMASI
+            </h2>
+            
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Boyutlar (m)</th>
+                        <th>Kapasite</th>
+                        <th>LED Sayısı</th>
+                        <th>Su Tüketimi</th>
+                        <th>Enerji</th>
+                        <th>ROI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AGRORACK01</strong></td>
+                        <td>6 x 1.5 x 2.5</td>
+                        <td class="highlight">2.000 bitki/ay</td>
+                        <td>75 adet</td>
+                        <td>25 L/gün</td>
+                        <td>15-20 kWh/gün</td>
+                        <td class="highlight">9-12 ay</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AGRORACK02</strong></td>
+                        <td>4 x 1.2 x 2.5</td>
+                        <td>1.800 bitki/ay</td>
+                        <td>60 adet</td>
+                        <td>20 L/gün</td>
+                        <td>12-18 kWh/gün</td>
+                        <td class="highlight">10-14 ay</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AGRORACK03</strong></td>
+                        <td>6 x 2 x 3</td>
+                        <td class="highlight">500 kg/ay</td>
+                        <td>100 adet</td>
+                        <td>40 L/gün</td>
+                        <td>25-35 kWh/gün</td>
+                        <td class="highlight">12-15 ay</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AGRORACK07</strong></td>
+                        <td>Özel tasarım</td>
+                        <td class="highlight">3-5 ton/gün</td>
+                        <td>1000+ adet</td>
+                        <td>500 L/gün</td>
+                        <td>150-250 kWh/gün</td>
+                        <td class="highlight">18-24 ay</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Container20</strong></td>
+                        <td>6 x 2.5 x 2.5</td>
+                        <td>4.000 bitki/ay</td>
+                        <td>150 adet</td>
+                        <td>50 L/gün</td>
+                        <td>30-40 kWh/gün</td>
+                        <td class="highlight">12-15 ay</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Container40</strong></td>
+                        <td>12 x 2.5 x 2.5</td>
+                        <td class="highlight">8.000 bitki/ay</td>
+                        <td>300 adet</td>
+                        <td>100 L/gün</td>
+                        <td>60-80 kWh/gün</td>
+                        <td class="highlight">12-18 ay</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="margin-top: 40px; padding: 30px; background: #e8f5e9; border-radius: 15px;">
+                <h3 style="color: #27ae60; margin-bottom: 15px;">🛡️ Galvaniz Malzeme Özellikleri</h3>
+                <ul style="columns: 2; column-gap: 40px;">
+                    <li><strong>Taşıyıcı Sistem:</strong> 40x40mm / 50x50mm sigma profil</li>
+                    <li><strong>Et Kalınlığı:</strong> 3mm galvaniz çelik</li>
+                    <li><strong>Kaplama:</strong> Sıcak daldırma galvaniz (80 mikron)</li>
+                    <li><strong>Dayanım:</strong> 25+ yıl korozyon garantisi</li>
+                    <li><strong>Tepsiler:</strong> 1.5mm galvaniz, su geçirmez</li>
+                    <li><strong>pH Dayanımı:</strong> 5.5-7.5 aralığı</li>
+                    <li><strong>Nem Dayanımı:</strong> %90'a kadar</li>
+                    <li><strong>Yük Kapasitesi:</strong> Raf başına 200kg</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="iletisim" class="contact-section">
+            <h2 style="font-size: 3em; margin-bottom: 20px;">
+                🚀 ŞİMDİ BAŞLAYIN!
+            </h2>
+            <p style="font-size: 1.5em; margin-bottom: 20px;">
+                Şehrin göbeğinde kendi tarlanızı kurun!
+            </p>
+            <p style="font-size: 1.3em; margin-bottom: 40px;">
+                Size özel fizibilite raporu ve sistem tasarımı için hemen iletişime geçin.<br>
+                <strong>İlk 10 müşteriye %20 indirim!</strong>
+            </p>
+            
+            <div class="contact-buttons">
+                <a href="tel:+90XXXXXXXXX" class="contact-button">
+                    📞 Hemen Ara
+                </a>
+                <a href="https://wa.me/90XXXXXXXXX" class="contact-button">
+                    💬 WhatsApp
+                </a>
+                <a href="mailto:info@gokdoganagrorack.com" class="contact-button">
+                    📧 E-posta Gönder
+                </a>
+            </div>
+            
+            <p style="margin-top: 50px; font-size: 1.2em;">
+                <strong>GÖKDOĞAN AGRORACK PRO</strong><br>
+                Galvaniz Gücüyle Şehre Tarla Taşıyoruz!<br><br>
+                📍 [Adres]<br>
+                🌐 www.gokdoganagrorack.com
+            </p>
+        </div>
+    </div>
+</body>
+</html>
